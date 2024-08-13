@@ -1,0 +1,15 @@
+<form class="flex gap-4" [formGroup]="form">
+    <p-dropdown formControlName="voice" 
+                [options]="voicesFiltered"
+                [filter]="true"
+                filterBy="name"
+                optionLabel="name"
+                placeholder="Select a voice">
+    </p-dropdown>
+    <p-selectButton formControlName="gender" 
+                    [options]="genders" 
+                    optionLabel="label" 
+                    optionValue="value"
+                    (onChange)="onChangeGender($event.value)">
+    </p-selectButton>
+</form>

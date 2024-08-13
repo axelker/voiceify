@@ -1,0 +1,11 @@
+<ng-container *ngIf="(this.voiceState$ | async) as voice">
+    <div *ngIf="!isloading" class="p-3 surface-section m-2 text-800 border-round-sm">
+        <form class="grid" [formGroup]="voiceForm" (ngSubmit)="test()">
+            <voiceify-gender-voice-choice class="col-12" (formReady)="addChildForm(VOICE_CONTROL_CHILD,$event)" [voices]="voice.voices"></voiceify-gender-voice-choice>
+            <voiceify-input-generate-voice class="col-12" (formReady)="addChildForm(INPUT_CONTROL_CHILD,$event)" ></voiceify-input-generate-voice>
+            <voiceify-play-song class="col-10" [link]="voice.link"></voiceify-play-song>
+            <p-button class="col-2" type="submit" [disabled]="voiceForm.invalid" label="Générate"></p-button>
+        </form>
+    </div>
+    <voiceify-spinner *ngIf="isloading"></voiceify-spinner>
+</ng-container>

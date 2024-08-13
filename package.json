@@ -1,0 +1,20 @@
+{
+  "name": "voiceify",
+  "version": "1.0.0",
+  "description": "Voiceify project",
+  "scripts": {
+    "start": "concurrently \"npm run start-voiceify-api\" \"cenpm run start-voiify-ui\"",
+    "start-voiceify-ui": "npm --prefix voiceify-ui start",
+    "start-voiceify-api": "npm --prefix voiceify-api start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.t2i.io:t2i/kaizen/tao-2/personal-projects/axke/voiceify.git"
+  },
+  "author": "axke",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

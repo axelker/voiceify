@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import 'primeflex/primeflex.scss';
+
+
+:root {
+    --background: #494D5F;
+    --blue: #A0D2EB;
+    --blue-hover: #6abee9;
+    --purple: #8458B3;
+    --purple-hover:#7d0cf4;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--background);
+}
+audio {
+    width: 100%;
+}
+.blue-backgroud {
+    background-color: var(--blue) !important;
+}
+.blue-color {
+    color: var(--blue) !important;
+}
+.blue-background:hover {
+    background-color: var(--blue-hover) !important;
+}
+.purple-background {
+    background-color: var(--purple) !important;
+}
+.purple-color {
+    color: var(--blue) !important;
+}
+.purple-background:hover {
+    background-color:  var(--purple-hover) !important;
+}
+
