@@ -19,7 +19,6 @@ export class InputGenerateVoiceComponent implements OnInit {
       textToConvert : ["",[Validators.required]],
     })
     this.formReady.emit(this.form);
-    console.log(this.form)
 
   }
 }

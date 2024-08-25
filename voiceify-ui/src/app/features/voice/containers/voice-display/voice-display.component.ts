@@ -36,15 +36,8 @@ export class VoiceDisplayComponent implements OnInit {
   addChildForm(name: string, group: FormGroup) {
     this.voiceForm.addControl(name, group);
   }
-  test() {
-    this.isloading = true;
-    console.log(this.voiceForm)
-    setTimeout(()=>{
-      this.isloading = false;
-    },2000)
-  }
+
   public generateAudioLink(): void {
-    console.log(this.voiceForm)
     const inputTextForm = this.voiceForm.get(this.INPUT_CONTROL_CHILD)?.value;
     const voiceChoiceForm = this.voiceForm.get(this.VOICE_CONTROL_CHILD)?.value;
     const requestGenerateVoice: IRequestTextToSpeech = {
